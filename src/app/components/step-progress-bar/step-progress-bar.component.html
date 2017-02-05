@@ -1,0 +1,11 @@
+<div class="step-container-new">
+  <ul>
+    <template ngFor let-step [ngForOf]="steps" let-i="index">
+      <li [ngClass]="{'complete': i<= currentStepIndex, 'current-step': steps[i].title == currentStep}">
+        <div>
+          <a [ngClass]="{'disabled': i > currentStepIndex}" (keydown.enter)="navigateLink($event)">{{i+1}}. {{step.title}}</a>
+        </div>
+      </li>
+    </template>
+  </ul>
+</div>

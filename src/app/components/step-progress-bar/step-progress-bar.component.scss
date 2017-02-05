@@ -1,0 +1,114 @@
+.step-container-new {
+    overflow: hidden;
+    border: 1px solid #C7D8E3;
+    border-radius: 15px;
+    color: #C7D8E3;
+    background-color: #fff;
+    width:100%;
+
+    ul {
+        display: table;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+
+        li {
+            display: table-cell;
+            height: 30px;
+            padding: 0px;
+            margin: 0px;
+            position: relative;
+            text-align: center;
+
+            background-size: 200% 100%;
+            background-image: linear-gradient(to right, #fff 50%, #21ACD5 50%);
+            transition: background-position 750ms ease-in;
+
+            div {
+                position: relative;
+                line-height: 30px;
+                height: 100%;
+                width: 100%;
+
+                a {
+                    color: #C7D8E3;
+                    text-decoration: none;
+
+                    &.disabled {
+                        pointer-events: none;
+                        cursor: default;
+                    }
+                }
+
+                &:after, &:before {
+                    content: '';
+                }
+            }
+
+            &.complete {
+                background-position: -100% 0;
+
+                div {
+                    a {
+                        color: #fff;
+                        transition: color 800ms ease;
+                    }
+                }
+
+                &.current-step {
+                    font-weight: bold;
+
+                    div:after {
+                        content: "";
+                        display: inline-block;
+                        border-width: 16px;
+                        border-style: solid;
+                        border-color:transparent;
+                        width: 0px;
+                        height: 0px;
+                        top: -1px;
+                        right: 0;
+                        position: absolute;
+                        box-shadow: 10px 10px 0 #80D0E7;
+                        transform: rotate(-45deg);
+
+                        transition: box-shadow 500ms ease;
+                        transition-delay: 600ms;
+                        z-index:5;
+                    }
+
+                    div:before {
+                        content: "";
+                        display: inline-block;
+                        border-width: 16px;
+                        border-style: solid;
+                        border-color:transparent;
+                        width: 0px;
+                        height: 0px;
+                        top: -1px;
+                        right: 14px;
+                        position: absolute;
+                        box-shadow: 10px 10px 0 #41B8DB;
+                        transform: rotate(-45deg);
+
+                        transition: box-shadow 500ms ease;
+                        transition-delay: 600ms;
+                        z-index:5;
+                    }
+
+                    &:last-child {
+                        div:after {
+                            border-radius: 30px;
+                            right: 3px;
+                        }
+                        div:before {
+                            border-radius: 30px;
+                            right: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
