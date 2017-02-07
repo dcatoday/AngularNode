@@ -1,0 +1,22 @@
+.image-loader-container {
+    background-image: url("../../assets/waterfall-min.jpg");
+    background-size: cover;
+    width: 50%;
+    height: 450px;
+    margin: 25px auto;
+    position: relative;
+
+    img {
+        opacity: 0;
+        width: 100%;
+        height:100%;
+        transition: opacity 1500ms ease;
+    }
+
+    h3 {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        color: #fff;
+    }
+}

@@ -1,0 +1,13 @@
+div {
+    margin-top: 50px;
+
+    .ice /deep/ h3 {
+        top: 30% !important;
+        left: 30% !important;
+    }
+
+    .waterfall /deep/ h3 {
+        top: 55% !important;
+        left: 47% !important;
+    }
+}
