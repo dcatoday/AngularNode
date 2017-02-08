@@ -1,0 +1,11 @@
+<p>
+  menu-collapse works!
+</p>
+<div [ngClass]="{'container':true,'visible': isVisible}">
+  <div class="content">
+    <ng-content ></ng-content>
+  </div>
+  <div [ngClass]="{'shadow':true,'easeShadow':isVisible}" (click)="toggleVisible()"></div>
+</div>
+
+

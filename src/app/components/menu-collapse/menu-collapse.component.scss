@@ -1,0 +1,36 @@
+.container {
+    width:100%;
+    transform: translate(-100%,0);
+    transition: transform 500ms ease;
+    height:100vh;
+    // overflow-y:auto;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:5;
+
+    &.visible {
+            transform: translate(0,0) !important;
+    }
+    .content {
+        float:left;
+        width:90%;
+        background-color: gray;
+        height:inherit;
+        overflow-y:auto;
+    }
+
+    .shadow {
+        float:left;
+        width: 10%;
+        height:inherit;
+        background: transparent; 
+
+        &.easeShadow {
+            transition: background 300ms ease;
+            transition-delay: 150ms;
+            background: rgba(64,54,54, 0.3); 
+        }
+    }
+}
+

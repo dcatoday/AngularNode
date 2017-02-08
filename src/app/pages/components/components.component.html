@@ -8,3 +8,15 @@
 
 
 <button (click)="changeStep()">Change Step</button>
+
+<hr>
+
+<app-menu-collapse [(isVisible)]="isVisible">
+  <ul>
+    <li>Hello</li>
+    <li>Click the right shadow to close</li>
+    <li>!!!!!!!!!!!!!!!</li>
+  </ul>
+</app-menu-collapse>
+
+<button (click)="toggleVisible()">Toggle Collapse</button> 

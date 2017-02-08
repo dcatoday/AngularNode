@@ -9,6 +9,11 @@ export class ComponentsComponent implements OnInit {
 
   private steps: Array<Object>;
   private currentStep: string;
+  private isVisible: boolean = false;
+
+  toggleVisible() {
+    this.isVisible = !this.isVisible;
+  }
 
   ngOnInit() {
     this.steps = [

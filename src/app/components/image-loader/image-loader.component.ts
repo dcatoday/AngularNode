@@ -14,7 +14,7 @@ export class ImageLoaderComponent implements OnInit {
   @Input('title') title: string;
 
   imageLoaded(e) {
-    e.currentTarget.style = "opacity:1";
+    e.currentTarget.classList = "show";
   }
 
   ngOnInit() {

@@ -11,10 +11,12 @@ import { HeaderComponentComponent } from './components/header-component/header-c
 // import { StepProgressBarComponent } from './components/step-progress-bar/step-progress-bar.component';
 import { SharedModule } from './pages/shared.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponentComponent,
+    
   ],
   imports: [
     BrowserModule,
