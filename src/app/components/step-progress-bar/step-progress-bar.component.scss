@@ -43,6 +43,7 @@
 
                 &:after, &:before {
                     content: '';
+                    box-shadow: 0px 0px 0 #fff;
                 }
             }
 
