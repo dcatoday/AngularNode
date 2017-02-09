@@ -7,7 +7,11 @@ import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 })
 export class MenuCollapseComponent implements OnInit {
   
-  @Input('isVisible') isVisible: boolean;
+  @Input('isVisible') isVisible: boolean = false;
+  @Input('alwaysCollapse') alwaysCollapse: boolean = false;
+  @Input('top') top: boolean = false;
+  @Input('bottom') bottom: boolean = false;
+  @Input('right') right: boolean = false;
   @Output() isVisibleChange = new EventEmitter<boolean>();
 
   toggleVisible() {

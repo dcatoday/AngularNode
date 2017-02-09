@@ -1,11 +1,13 @@
-<p>
-  menu-collapse works!
-</p>
-<div [ngClass]="{'container':true,'visible': isVisible}">
+<div [ngClass]="{'container':true,'visible': isVisible, 'always-collapse':alwaysCollapse,'top':top,'bottom':bottom,'right':right}">
   <div class="content">
-    <ng-content ></ng-content>
+    <!--<div [ngClass]="{'hamburger-icon':true,open: isVisible}" (click)="toggleVisible()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>-->
+    <span [ngClass]="{'hamburger-icon':true,open: isVisible}" (click)="toggleVisible()"></span>
+    <ng-content></ng-content>
   </div>
   <div [ngClass]="{'shadow':true,'easeShadow':isVisible}" (click)="toggleVisible()"></div>
 </div>
-
-
