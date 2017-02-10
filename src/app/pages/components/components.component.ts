@@ -9,6 +9,7 @@ export class ComponentsComponent implements OnInit {
 
   private steps: Array<Object>;
   private currentStep: string;
+  private hideToggle: boolean = true;
   private isVisible: boolean = false;
   private isVisible2: boolean = false;
   private isVisible3: boolean = false;

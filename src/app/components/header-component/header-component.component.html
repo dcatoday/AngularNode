@@ -1,8 +1,20 @@
-<div class="header-container">
+<!--<div class="header-container">
   <ul>
     <a routerLink="dashboard" routerLinkActive="active"><li>Dashboard</li></a>
     <a routerLink="components" routerLinkActive="active"><li>Components</li></a>
     <a routerLink="" routerLinkActive=""><li>Dashboard</li></a>
   </ul>
-</div>
+</div>-->
+<div class="header-container">
+  <!--<h1 class="header">Daniel Anderson</h1>-->
+  <app-menu-collapse [(isVisible)]="isVisible"
+  >
+  <h1 class="header">Daniel Anderson</h1>
+    <ul>
+      <a (click)="toggleVisible()" routerLink="dashboard" routerLinkActive="active"><li>Dashboard</li></a>
+      <a (click)="toggleVisible()" routerLink="components" routerLinkActive="active"><li>Components</li></a>
+      <a (click)="toggleVisible()" routerLink="" routerLinkActive=""><li>Another Page</li></a>
+    </ul>
+  </app-menu-collapse>
 
+</div>

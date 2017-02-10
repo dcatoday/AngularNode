@@ -11,3 +11,9 @@ div {
         left: 47% !important;
     }
 }
+
+@media (max-width:768px) {
+    div {
+        margin-top:0;
+    }
+}

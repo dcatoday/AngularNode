@@ -1,4 +1,10 @@
-<div [ngClass]="{'container':true,'visible': isVisible, 'always-collapse':alwaysCollapse,'top':top,'bottom':bottom,'right':right}">
+  <!--<ng-content select=".header"></ng-content>-->
+<div [ngClass]="{'hamburger-menu-icon':true,'open':isVisible}" *ngIf="!alwaysCollapse && !hideToggle" (click)="toggleVisible()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<div [ngClass]="{'container':true,'visible': isVisible, 'always-collapse pop-out':alwaysCollapse,'top':top,'bottom':bottom,'right':right}">
   <div class="content">
     <!--<div [ngClass]="{'hamburger-icon':true,open: isVisible}" (click)="toggleVisible()">
       <span></span>
@@ -6,7 +12,8 @@
       <span></span>
       <span></span>
     </div>-->
-    <span [ngClass]="{'hamburger-icon':true,open: isVisible}" (click)="toggleVisible()"></span>
+    <!--<ng-content select=".header"></ng-content>-->
+    <span [ngClass]="{'hamburger-icon':true,open: isVisible}" *ngIf="alwaysCollapse" (click)="toggleVisible()"></span>
     <ng-content></ng-content>
   </div>
   <div [ngClass]="{'shadow':true,'easeShadow':isVisible}" (click)="toggleVisible()"></div>

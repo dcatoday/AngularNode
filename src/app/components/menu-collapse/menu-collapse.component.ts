@@ -12,6 +12,7 @@ export class MenuCollapseComponent implements OnInit {
   @Input('top') top: boolean = false;
   @Input('bottom') bottom: boolean = false;
   @Input('right') right: boolean = false;
+  @Input('hideToggle') hideToggle: boolean = false;
   @Output() isVisibleChange = new EventEmitter<boolean>();
 
   toggleVisible() {

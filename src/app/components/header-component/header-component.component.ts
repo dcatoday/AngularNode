@@ -9,4 +9,9 @@ export class HeaderComponentComponent implements OnInit {
   ngOnInit() {
   }
 
+  private isVisible: boolean = false;
+  toggleVisible() {
+    this.isVisible = false;
+  }
+
 }
